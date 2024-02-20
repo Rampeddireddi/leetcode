@@ -14,7 +14,7 @@ public:
               }
           }
           if(mp.size()>ma)ma=mp.size();
-          
+          if(ma==s.size())break;
       }
       return ma;
     }
