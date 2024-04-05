@@ -9,7 +9,7 @@ public:
     string makeGood(string s) {
         stack<char> st;
         for (int i = 0; i < s.size(); i++) {
-                  if (!st.empty() && abs(st.top() - s[i]) == abs('A' - 'a')) {
+                  if (!st.empty() && abs(st.top() - s[i]) == 32) {
                 st.pop();
             } else {
                 st.push(s[i]);
