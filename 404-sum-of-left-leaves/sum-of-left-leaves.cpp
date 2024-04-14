@@ -19,7 +19,7 @@ public:
     
     void left(TreeNode* root){
         if(root==NULL) return;
-        if(root->left &&!root->left->left && !root->left->right) sum+=root->left->val;
+        if(root->left &&root->left->left==NULL && root->left->right==NULL) sum+=root->left->val;
         left(root->left);
         left(root->right);
     }
