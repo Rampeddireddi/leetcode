@@ -12,18 +12,12 @@
 class Solution {
 public:
     int sumNumbers(TreeNode* root) {
-        return sum(root, 0);
+  return sum(root,0);
     }
-    
-    int sum(TreeNode* root, int currentSum) {
-        if (root == nullptr) return 0;
-        // Calculate the current sum along the path
-        int newSum = currentSum * 10 + root->val;
-        // If it's a leaf node, return the sum of this path
-        if (root->left == nullptr && root->right == nullptr) {
-            return newSum;
-        }
-        // Otherwise, continue summing the left and right subtrees
-        return sum(root->left, newSum) + sum(root->right, newSum);
+    int sum(TreeNode* root,int s){
+        if(root==NULL)return 0;
+        s=s*10+root->val;
+        if(root->left==NULL && root->right==NULL)return s;
+        return sum(root->left,s)+sum(root->right,s);
     }
 };
