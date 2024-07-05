@@ -11,7 +11,7 @@
 class Solution {
 public:
     vector<int> nodesBetweenCriticalPoints(ListNode* head) {
-        vector<int>res;
+        // vector<int>res;
         vector<int>subres;
         if(head->next==NULL || head->next->next==NULL)return {-1,-1};
         int ind=2;
@@ -39,9 +39,8 @@ public:
                 minE=subres[i]-subres[i-1];
             }
         }
-        res.push_back(minE);
-        res.push_back(maxE);
-        return res;
+       
+        return {minE,maxE};
         }
         return {-1,-1};
     }
