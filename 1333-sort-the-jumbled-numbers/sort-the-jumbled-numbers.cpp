@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<int> sortJumbled(vector<int>& mapping, vector<int>& nums) {
-        map<int, vector<int> > jumbledmap;
+        unordered_map<int, vector<int> > jumbledmap;
         vector<int> res;
         vector<int> finalres;
         
