@@ -1,7 +1,7 @@
 class Solution {
 public:
     int jump(vector<int>& nums) {
-         if(nums.size()==1 && nums[0]==0)return 0;
+        //  if(nums.size()==1 && nums[0]==0)return 0;
          int jumps=0,l=0,r=0;
          int n=nums.size();
          int ind=0;
