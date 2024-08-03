@@ -1,8 +1,8 @@
 class Solution {
 public:
     bool canBeEqual(vector<int>& target, vector<int>& arr) {
-        // ios_base::sync_with_stdio(0);
-        // cin.tie(0);
+        ios_base::sync_with_stdio(0);
+        cin.tie(0);
         if(target.size()!=arr.size())return false;
 
         unordered_map<int,int>targetmap;
