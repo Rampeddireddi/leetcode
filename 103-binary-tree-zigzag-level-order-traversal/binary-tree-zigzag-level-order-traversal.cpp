@@ -13,6 +13,8 @@ class Solution {
 public:
 
 vector<vector<int>> zigzagLevelOrder(TreeNode* root) {
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
     queue<TreeNode*>Q;
      bool zige=false;
     vector<vector<int>>res;
