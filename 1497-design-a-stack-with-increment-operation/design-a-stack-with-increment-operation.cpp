@@ -1,8 +1,12 @@
 class CustomStack {
+  
 public:
+   
      vector<int>stack;
    int top;
     CustomStack(int maxSize) {
+           ios_base::sync_with_stdio(false);
+     cin.tie(0);
         stack.resize(maxSize);
       top=-1;
     }
