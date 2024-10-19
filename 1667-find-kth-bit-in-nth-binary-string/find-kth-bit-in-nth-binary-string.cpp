@@ -1,5 +1,8 @@
+
 class Solution {
 public:
+    // ios_base::sync_with_stdio(0);
+    // cin.tie(0);
     string reverseinvert(string str){
         string news="";
         for(int i=0;i<str.size();i++){
@@ -16,8 +19,9 @@ public:
             string subr=s[i-1]+"1"+reverseinvert(s[i-1]);
             s.push_back(subr);
         }
-    string res=s[n-1];
-    char ans=res[k-1];
-    return ans;
+    // string res=s[n-1];
+    // char ans=res[k-1];
+    // return ans;
+    return s[n-1][k-1];
     }
 };
