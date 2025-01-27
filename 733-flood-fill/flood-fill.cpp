@@ -1,6 +1,8 @@
 class Solution {
 public:
     vector<vector<int>> floodFill(vector<vector<int>>& image, int sr, int sc, int color) {
+        ios_base::sync_with_stdio(0);
+        cin.tie(0);
         queue<pair<int,int>>q;
         int n=image.size();
         int m=image[0].size();
