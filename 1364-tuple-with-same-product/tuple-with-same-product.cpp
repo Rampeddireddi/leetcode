@@ -1,6 +1,8 @@
 class Solution {
 public:
     int tupleSameProduct(vector<int>& nums) {
+        ios_base::sync_with_stdio(0);
+        cin.tie(0);
         map<int,int>mp;
         int total=0;
         int n=nums.size();
