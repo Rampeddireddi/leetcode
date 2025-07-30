@@ -1,19 +1,16 @@
 class Solution {
 public:
-
-   int stashed(int ind, vector<int>nums,vector<int>&dp){
-    if(ind ==0)return dp[0]=nums[0];
-    if(ind<0)return 0;
-    if(dp[ind]!=-1)return dp[ind];
-    
-    int pick=nums[ind]+stashed(ind-2,nums,dp);
-    int notpick=0+stashed(ind-1,nums,dp);
-     dp[ind]=max(pick,notpick);
-    return dp[ind];
-   }
-
+    int midnightmotivation(int n,vector<int>&nums,vector<int>&dp){
+        if(n==0)return nums[0];
+        if(n==1)return max(nums[1],nums[0]);
+        if(dp[n]!=-1)return dp[n];
+        int pick=nums[n]+midnightmotivation(n-2,nums,dp);
+        int notpick=midnightmotivation(n-1,nums,dp);
+        dp[n]=max(pick,notpick);
+        return dp[n];
+    }
     int rob(vector<int>& nums) {
         vector<int>dp(nums.size(),-1);
-        return stashed(nums.size()-1,nums,dp);
+    return midnightmotivation(nums.size()-1,nums,dp);
     }
 };
