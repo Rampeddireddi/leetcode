@@ -1,0 +1,15 @@
+class Solution {
+public:
+    bool kLengthApart(vector<int>& nums, int k) {
+        int dis=k;
+        for(int i=0;i<nums.size();i++){
+            if(nums[i]==1){
+                if(dis<k)return false;
+                dis=0;
+            }
+            else dis++;
+
+        }
+        return true;
+    }
+};
