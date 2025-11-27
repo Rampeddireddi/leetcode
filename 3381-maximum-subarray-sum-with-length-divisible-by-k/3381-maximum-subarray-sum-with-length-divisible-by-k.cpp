@@ -1,6 +1,8 @@
 class Solution {
 public:
     long long maxSubarraySum(vector<int>& nums, int k) {
+        cin.tie(nullptr);
+        ios::sync_with_stdio(0);
        map<int, long long>mp;
        long long cur=0;
        long long res=LLONG_MIN;
